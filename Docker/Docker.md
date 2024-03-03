@@ -1,4 +1,5 @@
 # Docker
+
 Before going into Docker, Let's understand How companies used to deploy applications in a server. They have different methods for deploying applications:
 
 - Bare Metal Servers involve installing the operating system directly on a physical server, making recovery slow in case of application crashes, and it could take around 30 minutes. With Virtual Machines like AWS EC2, a hypervisor manages virtual machines, reducing downtime but still taking around 2-3 minutes to restart. Docker, a containerization technology, uses images to create lightweight and isolated containers, allowing for instant recovery within seconds if the application crashes.

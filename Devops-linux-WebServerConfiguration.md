@@ -64,6 +64,11 @@ Git is a version control system used to track changes in a local development env
 
 Git is essential for storing code and tracking code changes.
 
+### Basic Git Commands
+
+- **git init**: Initializes a Git repository.
+- **git status**: Checks the status of the Git repository.
+- **git add**: Adds files to the staging area.
 
 ---
 
@@ -87,6 +92,12 @@ Linux is an open-source operating system known for its free, secure, flexible, a
 
 In Linux, all files and directories are stored in the root directory (/).
 
+### How to Install Linux OS (Any Distribution)?
+
+1. **Bare Metal**: Install Linux OS directly on the hardware.
+2. **Virtualization**: Install Linux OS on a virtual machine using tools like VirtualBox or Hyper-V.
+3. **Cloud**: Install Linux OS on the cloud using providers like AWS, Azure, or GCP.
+4. **Container**: Install Linux OS on containers using tools like Docker or Kubernetes.
 
 ### Hosting Apache HTTPD Web Server on Redhat Linux OS
 

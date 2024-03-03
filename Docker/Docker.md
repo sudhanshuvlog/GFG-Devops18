@@ -19,6 +19,8 @@ A Docker Container is a running instance of a Docker image. We can create a Dock
 
 For more reference, [Click Here](https://www.docker.com/resources/what-container/)<br>
 
+#### Learn About virtualization - https://aws.amazon.com/what-is/virtualization/
+
 ### Docker Commands
 
 - **docker version**: Shows Docker version.
@@ -43,3 +45,9 @@ For more reference, [Click Here](https://www.docker.com/resources/what-container
 - **docker rmi -f <image-id>**: Deletes a Docker image forcefully.
 - **netstat -tnlp**: Displays all ports running on the host machine.
 - **ctrl+p+q**: Detaches the terminal from the Docker container without stopping it.
+
+- Docker Architecture -
+  <img width="596" alt="image" src="https://github.com/sudhanshuvlog/GFG-Devops18/assets/124223047/3624888c-0dd8-46c8-bcdc-4229fde9b825">
+
+- Dockerfile- https://docs.docker.com/reference/dockerfile/#:~:text=Docker%20can%20build%20images%20automatically,line%20to%20assemble%20an%20image.
+

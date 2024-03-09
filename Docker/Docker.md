@@ -43,3 +43,4 @@ For more reference, [Click Here](https://www.docker.com/resources/what-container
 - **docker rmi -f <image-id>**: Deletes a Docker image forcefully.
 - **netstat -tnlp**: Displays all ports running on the host machine.
 - **ctrl+p+q**: Detaches the terminal from the Docker container without stopping it.
+- **docker run -p 80:80 -d --name webos -v /mydata/:/usr/share/nginx/html  nginx** Mount a local     directory with the container to get persistent volume

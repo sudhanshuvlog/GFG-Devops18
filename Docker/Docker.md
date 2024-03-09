@@ -1,4 +1,5 @@
 # Docker
+
 Before going into Docker, Let's understand How companies used to deploy applications in a server. They have different methods for deploying applications:
 
 - Bare Metal Servers involve installing the operating system directly on a physical server, making recovery slow in case of application crashes, and it could take around 30 minutes. With Virtual Machines like AWS EC2, a hypervisor manages virtual machines, reducing downtime but still taking around 2-3 minutes to restart. Docker, a containerization technology, uses images to create lightweight and isolated containers, allowing for instant recovery within seconds if the application crashes.
@@ -17,6 +18,8 @@ A Docker Container is a running instance of a Docker image. We can create a Dock
 <br>
 
 For more reference, [Click Here](https://www.docker.com/resources/what-container/)<br>
+
+#### Learn About virtualization - https://aws.amazon.com/what-is/virtualization/
 
 ### Docker Commands
 
@@ -42,3 +45,9 @@ For more reference, [Click Here](https://www.docker.com/resources/what-container
 - **docker rmi -f <image-id>**: Deletes a Docker image forcefully.
 - **netstat -tnlp**: Displays all ports running on the host machine.
 - **ctrl+p+q**: Detaches the terminal from the Docker container without stopping it.
+
+- Docker Architecture -
+  <img width="596" alt="image" src="https://github.com/sudhanshuvlog/GFG-Devops18/assets/124223047/3624888c-0dd8-46c8-bcdc-4229fde9b825">
+
+- Dockerfile- https://docs.docker.com/reference/dockerfile/#:~:text=Docker%20can%20build%20images%20automatically,line%20to%20assemble%20an%20image.
+

@@ -81,3 +81,17 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 - Configure the SonarQube Server using the `SonarQube-docker-compose.yml` file present in this Repo
 - Once you build your Pipeline, It's will look like this - <img width="685" alt="image" src="https://github.com/sudhanshuvlog/GFG-Devops16/assets/57751726/eb10c418-dc8b-494d-9300-25bd20fed7af">
 - CI-CD Pipeline Diagram - <img width="680" alt="image" src="https://github.com/sudhanshuvlog/GFG-Devops16/assets/57751726/d3979504-b0d3-4657-b85a-1c59165d3311">
+
+## GitHub Actions
+
+Seamless Integration:
+GitHub Actions seamlessly integrates with your GitHub repositories, allowing you to define workflows directly within your codebase.
+
+No Infrastructure Management:
+There's no need to manage infrastructure like EC2 instances or Jenkins servers. GitHub handles the underlying infrastructure, simplifying the setup process.
+
+Easy Configuration:
+Workflows are defined using YAML files within your repository, making it easy to version control and collaborate on CI/CD configurations.
+
+Event-Driven Triggers:
+GitHub Actions triggers workflows based on various events such as pushes, pull requests, issue comments, and more, ensuring your CI/CD pipeline responds dynamically to repository changes.

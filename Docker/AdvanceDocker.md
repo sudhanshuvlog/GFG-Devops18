@@ -142,3 +142,83 @@ docker tag <image_name> <registry_url>/<image_name>
 docker push <registry_url>/<image_name>
 ```
 ---
+
+## Docker Networking
+
+- **docker network ls** - This command will allow you to list all the networks.
+- **docker network create <network_name>** - This command will allow you to create a network.
+- **docker network inspect <network_name>** - This command will allow you to inspect a network. It will give you detailed information about the network such as the IP address, the containers connected to the network, etc.
+- **docker network connect <network_name> <container_name>** - This command will allow you to connect a container to a network.
+- **docker network disconnect <network_name> <container_name>** - This command will allow you to disconnect a container from a network.
+
+**How Docker Networking Works?**
+
+- **SDN** - Docker uses SDN (Software Defined Networking) to create and manage networks. It creates a virtual network bridge on the host machine. This bridge is used to connect the containers to the network.
+
+---
+
+
+- There are mainly four types of networks in Docker:
+
+- **Bridge** - This is the default network type. It provides communication between the host and the containers. It also provides communication between the containers on the same host.
+- **Host** - This network type removes the network isolation between the host and the containers. It also removes the network isolation between the containers on the same host.
+- **None** - This network type removes the network isolation between the containers on the same host. But it does not provide communication between the host and the containers.
+- **Overlay** - This network type provides communication between the containers running on different hosts.
+
+- You can attach a container to a network while creating it with the help of the following command:
+
+- Create Bridge Network with defining the subnet and gateway
+```bash
+docker network create \
+  --subnet=192.168.0.0/24 \
+  --gateway=192.168.0.1 \
+  --driver=bridge \
+  my_bridge
+```
+
+```bash
+docker run -it --network <network_name> <image_name>
+```
+---
+
+## Docker Volume
+
+A Docker volume is a directory that is stored outside of the container. It is used to persist data. It is also used to share data between containers.
+
+**Docker Volume Commands**
+
+- **docker volume ls** - This command will allow you to list all the volumes.
+- **docker volume create <volume_name>** - This command will allow you to create a Named volume which will be managed by docker.
+- **docker volume inspect <volume_name>** - This command will allow you to inspect a volume. It will give you detailed information about the volume such as the mount point, the containers connected to the volume, etc.
+
+- Mount docker named volume to the container
+```bash
+docker run -it -v myvolume:/data centos:7
+```
+- Mount host volume to the container - We are creating a directory in the host system and then mounting it with the container
+
+```bash
+
+mkdir /mydata
+docker run -it -v /mydata/:/data centos:7
+
+```
+
+---
+
+### How to Limit Resources for a Container?
+
+**Docker Resource Limit Commands**
+
+- **docker run -it --memory <memory_limit> <image_name>** - This command will allow you to limit the memory usage of a container.
+- **docker run -it --cpus <cpu_limit> <image_name>** - This command will allow you to limit the CPU usage of a container.
+
+---
+
+### Other Commands, Information, and Files
+
+- **ps aux** - This command will allow us to list all the running processes.
+- **kill -9 <process_id>** - This command will allow us to kill a process.
+- **rpm -q httpd** - This command will allow us to check if a package is installed.
+- **/etc/ssh/sshd_config** - This file contains the configuration for the SSH server.
+- **openssh** - OpenSSH is the premier connectivity tool for remote login with the SSH protocol.

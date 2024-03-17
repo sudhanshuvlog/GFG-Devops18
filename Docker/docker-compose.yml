@@ -1,5 +1,8 @@
 version: '3.1'
 name: mywordpressproj
+networks:
+  mywordpressnet:
+    driver: bridge
 services:
 
   wordpress:
@@ -14,6 +17,8 @@ services:
       WORDPRESS_DB_NAME: exampledb
     volumes:
       - wordpress:/var/www/html
+    networks:
+      - mywordpressnet
 
   db:
     image: mysql:8.0
@@ -25,6 +30,8 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db:/var/lib/mysql
+    networks:
+      - mywordpressnet
 
 volumes:
   wordpress:

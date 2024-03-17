@@ -80,6 +80,19 @@ Example: `cp ./a.py /root/`
 `grep`: Search for patterns in files.
 Example: `grep pattern file.txt`
 
+`rmdir dir_name`: Remove an empty dir
+
+mv: Move or rename files or directories.
+Example: `mv file.txt new_location/file.txt`
+
+rm: Remove/delete files or directories.
+Example: `rm file.txt`
+`rm -rf`: Remove directories and it’s contents forcefully
+
+`mv source_file dest_dir`: Move a file from one location to another
+`mv old_filename new_filename`: Rename a file
+`mv source_dir dest_dir`: Move a directory
+`mv old_dir new_dir`: Rename a directory
 
 
 
@@ -116,3 +129,33 @@ User administration allows for tracking individual user activities on the system
 `su - userX`: Switches to the "userX" user.
 
 `whoami`: Displays the current username (now "userX").
+
+`groupadd teamA`: Creates a new group named "teamA."
+
+`cat /etc/group | grep teamA`: Displays information about the "teamA" group from the /etc/group file, /etc/group file has the list of all groups and associated user with them,
+
+`useradd -G teamA userX`: Adds a new user named "userX" to the "teamA" group.
+
+`useradd -G teamA userY`: Adds another user named "userY" to the "teamA" group.
+
+`cat /etc/group | grep teamA`: Displays updated information about the "teamA" group.
+
+`passwd userX`: Sets a password for the "userX" user.
+
+`ls -l -a`: Lists all files 
+
+`chown :teamA /home/teamA/`: Changes the group ownership of the "teamA" directory, initially root was the group owner, but now “teamA” is the group owner
+
+`chmod g+w /home/teamA/`: Adds write permission for the group to the "teamA" directory.
+
+`chmod o-rx teamA`: Removes read and execute permissions for others on the "teamA" directory.
+
+`su - userX`: Switches to the "userX" user.
+
+`ls -lrt`: Lists files in long format, sorted by modification time (includes the new file).
+
+`chown :teamA userX-file.txt`: Changes the group ownership of "userX-file.txt" to "teamA."
+
+`exit`: Exits the "userX" user session.
+
+

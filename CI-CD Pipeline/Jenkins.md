@@ -95,3 +95,53 @@ Workflows are defined using YAML files within your repository, making it easy to
 
 Event-Driven Triggers:
 GitHub Actions triggers workflows based on various events such as pushes, pull requests, issue comments, and more, ensuring your CI/CD pipeline responds dynamically to repository changes.
+
+### GitHub Actions Workflow
+
+- **Workflow** A GitHub Actions Workflow is an automated process designed to handle tasks such as building, testing, packaging, releasing, or deploying projects within your repository.
+- We have to create .github/workflows directory in our repository and we have to write the workflow in a file called `YAML` file.
+- Utilize triggers to initiate the Workflow. Triggers can include events such as pushes, pull requests, comments, or custom events based on your project's requirements.
+
+
+### GitHub Actions Hosted Runners
+
+- **GitHub Actions Hosted Runners** are virtual machines that are hosted by GitHub.
+- We can use the GitHub Actions Hosted Runners to run our CI/CD pipeline.
+- It's just like using Jenkins with EC2 instances (slave nodes).
+
+We can always refer to the [official documentation](https://docs.github.com/en/actions) for more information.<br>
+
+You can use this link to use already created codes for GitHub Actions: https://github.com/actions 
+
+## Mergify
+
+Mergify is a tool that allows you to automatically merge your pull requests when they are ready. It is a great tool to use when you have a lot of pull requests and you want to automate the process of merging them.
+
+
+### How to install Mergify?
+
+- We can use the following steps to install Mergify in our GitHub repository.
+
+1. Go to the [Mergify website](https://mergify.io/) and sign in with your GitHub account.
+2. Once you are signed in, you can install Mergify in your GitHub repository.
+3. After installing Mergify, you can configure it to automatically merge your pull requests when they are ready.
+4. You can also configure Mergify to automatically close your pull requests when they are not ready to be merged.
+5. You can also configure Mergify to automatically label your pull requests when they are ready to be merged.
+6. You can also configure Mergify to automatically assign your pull requests to the person who is responsible for merging them.
+
+### Mergify Rules
+
+- We can write the rules in a file called `.mergify.yml` and we can configure Mergify to automatically merge our pull requests based on the rules we have written in the `.mergify.yml` file.
+
+### Example of Mergify Rules
+
+```yaml
+pull_request_rules:
+  - name: Automatically merge pull requests
+    conditions:
+      - base=main
+      - label=ready-to-merge
+    actions:
+      merge:
+        method: merge
+```

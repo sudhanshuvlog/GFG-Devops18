@@ -88,3 +88,6 @@ Important Document Links:
 
 *What Is Namespace* - https://www.nginx.com/blog/what-are-namespaces-cgroups-how-do-they-work/
 
+- `docker save -o image.tar myimg` - save a Docker images to a tar archive
+- `docker load -i image.tar` - load Docker images from a tar archive
+

@@ -1,0 +1,746 @@
+    1  kubectl proxy
+    2  cd /
+    3  clear
+    4  kubectl grt ns
+    5  kubectl get ns
+    6  kubectl get pods
+    7  clear
+    8  kubectl get all -n kubernetes-dashboard
+    9  kubectl get svc  -n kubernetes-dashboard
+   10  kubectl expose service kubernetes-dashboard --type=NodePort --name=kubernetes-dashboard-nodeport --namespace=kubernetes-dashboard
+   11  kubectl get svc  -n kubernetes-dashboard
+   12  curl 192.168.49.2:30686
+   13  curl 192.168.49.2:30686/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/
+   14  yum install socat
+   15  socat TCP4-LISTEN:8080,fork,su=nobody TCP4:192.168.49.2:30686
+   16  socat TCP4-LISTEN:8080,fork,su=nobody TCP4:192.168.49.2:40579
+   17  socat TCP4-LISTEN:8081,fork,su=nobody TCP4:192.168.49.2:40579
+   18  kubectl get svc
+   19  kubectl get svc  -n kubernetes-dashboard
+   20  kubectl edit svc kubernetes-dashboard
+   21  kubectl edit svc kubernetes-dashboard -n kubernetes-dashboard
+   22  kubectl get svc  -n kubernetes-dashboard
+   23  socat TCP4-LISTEN:8082,fork,su=nobody TCP4:192.168.49.2:31306
+   24  socat TCP4-LISTEN:8082,fork,su=nobody TCP4:192.168.49.2:31306 &
+   25  socat TCP4-LISTEN:8082,fork,su=nobody TCP4:192.168.49.2:31306 &
+   26  socat TCP4-LISTEN:8083,fork,su=nobody TCP4:192.168.49.2:31306 &
+   27  clear
+   28  mkdir k8s
+   29  cd k8s/
+   30  vi pod.yml
+   31  kubectl apply -f pod.yml 
+   32  kubectl get pods
+   33  kubectl describe pod liveness-probe
+   34  kubectl describe pod liveness-probe
+   35  kubectl get pods
+   36  vi pod.yml 
+   37  kubectl apply -f pod.yml 
+   38  ls
+   39  kubectl delete pod liveness-probe
+   40  kubectl apply -f pod.yml 
+   41  kubectl describe pod liveness-probe
+   42  kubectl get pods
+   43  kubectl exec -it liveness-probe bash
+   44  kubectl get pods
+   45  kubectl get pods
+   46  kubectl get pods
+   47  kubectl get pods
+   48  kubectl get pods
+   49  kubectl get pods
+   50  kubectl get pods
+   51  kubectl exec -it liveness-probe bash
+   52  vi pod-flask.yml
+   53  kubectl apply -f pod-flask.yml 
+   54  vi pod-flask.yml
+   55  kubectl apply -f pod-flask.yml 
+   56  ls
+   57  ls
+   58  kubectl get pods
+   59  kubectl delete pod flask
+   60  kubectl apply -f pod-flask.yml 
+   61  ls
+   62  kubectl get pods
+   63  kubectl get pods
+   64  kubectl exec -it flask bash
+   65  minikube bash
+   66  minikube ssh
+   67  vi pod-flask.yml 
+   68  kubectl apply -f pod-flask.yml 
+   69  kubectl get pods
+   70  kubectl delete pod flask
+   71  kubectl apply -f pod-flask.yml 
+   72  kubectl get pods
+   73  kubectl get pods
+   74  vi pod-flask.yml 
+   75  kubectl exec -it flask bash
+   76  kubectl get pods
+   77  kubectl get pods
+   78  vi pod-flask.yml 
+   79  kubectl apply -f pod-flask.yml 
+   80  kubectl delete pod flask
+   81  kubectl apply -f pod-flask.yml 
+   82  kubectl get pods
+   83  kubectl exec -it flask bash
+   84  kubectl get pods
+   85  kubectl get pods
+   86  kubectl get pods
+   87  kubectl get pods
+   88  kubectl get pods
+   89  kubectl get pods
+   90  kubectl get pods
+   91  kubectl exec -it flask bash
+   92  clear
+   93  vi mongo-app.yml
+   94  vi mongo-config.yml
+   95  vi mongo-service.yml
+   96  vi mongo-express-webapp.yml
+   97  vi secret.yml
+   98  vi webapp-service.yml
+   99  kubectl apply -f secret.yml 
+  100  kubectl apply -f mongo-config.yml 
+  101  kubectl apply -f webapp-service.yml 
+  102  kubectl apply -f mongo-service.yml 
+  103  kubectl apply -f mongo-app.yml 
+  104  kubectl apply -f mongo-express-webapp.yml 
+  105  clear
+  106  kubectl get pods
+  107  kubectl get pods
+  108  kubectl get pods
+  109  kubectl get pods
+  110  kubectl get pods
+  111  kubectl get pods
+  112  kubectl get pods
+  113  kubectl get svc
+  114  socat TCP4-LISTEN:8080,fork,su=nobody TCP4:192.168.49.2:30112
+  115  cd /
+  116  cd k8s/
+  117  clear
+  118  kubectl get pods
+  119  kubectl delete pod mongo-deployment-69646f64f-lr6wf
+  120  kubectl get pods
+  121  vi mongo-app.yml 
+  122  kubectl apply -f mongo-app.yml 
+  123  vi mongo-app.yml 
+  124  vi mongo-app.yml 
+  125  kubectl apply -f mongo-app.yml 
+  126  kubectl get pods
+  127  kubectl get pods mongo-deployment-68dbd64d6f-5h69t -o yaml
+  128  minikube ssh
+  129  docker exec -it minikube bash
+  130  vi mongo-app.yml 
+  131  mkdir /data
+  132  kubectl apply -f mongo-app.yml 
+  133  vi mongo-app.yml 
+  134  kubectl apply -f mongo-app.yml 
+  135  kubectl get pods
+  136  ls /data
+  137  ls /data
+  138  cd /data/
+  139  l
+  140  sls
+  141  ls
+  142  ls
+  143  cd /
+  144  cd k8s/
+  145  vi mongo-app.yml 
+  146  docker exec -it minikube bash
+  147  kubectl get pods
+  148  kubectl delete pod mongo-deployment-64985574d4-bwnv4
+  149  kubectl get pod
+  150  vi pv.yml
+  151  kubectl apply -f pv.yml 
+  152  kubectl get pv
+  153  kubectl get pv
+  154  kubectl get pv
+  155  vi pvc.yml
+  156  kubectl apply -f pvc.yml 
+  157  kubectl get pv
+  158  kubectl get pvc
+  159  ls
+  160  mkdir gfg
+  161  vi mongo-app.yml 
+  162  kubectl apply -f mongo-app.yml 
+  163  kubectl get pods
+  164  kubectl get pods
+  165  kubectl get pods
+  166  kubectl get pods
+  167  kubectl get pods
+  168  kubectl get pods
+  169  kubectl get pods
+  170  kubectl get pods
+  171  cat pv.yml 
+  172  pwd
+  173  ls
+  174  cat pvc.yml 
+  175  cat mongo-app.yml 
+  176  kubectl get pods
+  177  kubectl logs mongo-deployment-56c4944b96-7swtk
+  178  vi mongo-app.yml 
+  179  kubectl delete deployment mongo-deployment
+  180  kubectl get pods
+  181  kubectl apply -f mongo-app.yml 
+  182  watch kubectl get pods
+  183  kubectl describe deployment mongo-deployment
+  184  kubectl get pods
+  185  kubectl describe pod mongo-deployment-56c4944b96-6k4vr
+  186  cd gff
+  187  cd gfg
+  188  ls
+  189  pwd
+  190  ls -l -a
+  191  chmod 777 .
+  192  ls -l -a
+  193  kubectl describe pod mongo-deployment-56c4944b96-6k4vr
+  194  kubectl describe pod mongo-deployment-56c4944b96-6k4vr
+  195  kubectl describe pod mongo-deployment-56c4944b96-6k4vr
+  196  mkdir /gfg
+  197  rm -rf gfg
+  198  kubectl describe pod mongo-deployment-56c4944b96-6k4vr
+  199  pwd
+  200  kubectl describe pod mongo-deployment-56c4944b96-6k4vr
+  201  cd ..
+  202  chmod 777 .
+  203  kubectl describe pod mongo-deployment-56c4944b96-6k4vr
+  204  kubectl describe pod mongo-deployment-56c4944b96-6k4vr
+  205  kubectl describe pod mongo-deployment-56c4944b96-6k4vr
+  206  kubectl delete pod mongo-deployment-56c4944b96-6k4vr
+  207  kubectl get pods
+  208  kubectl get pods
+  209  kubectl describe pod mongo-deployment-56c4944b96-kvc99 
+  210  kubectl delete pv
+  211  kubectl delete pv mongo-pv
+  212  kubectl get pv
+  213  kubectl delete pvc mongo-pvc
+  214  kubectl get pvc
+  215  kubectl delete deployment mongo-deployment
+  216  kubectl get pvc
+  217  kubectl get pv
+  218  kubectl apply -f pv.yml 
+  219  kubectl apply -f pvc.yml 
+  220  kubectl apply -f mongo-app.yml 
+  221  kubectl get pods
+  222  kubectl get pods
+  223  kubectl logs mongo-deployment-56c4944b96-hsc5t
+  224  kubectl describe pod mongo-deployment-56c4944b96-hsc5t
+  225  kubectl exec -it bash minikube 
+  226  kubectl exec -it minikube bash
+  227  docker exec -it minikube bash
+  228  kubectl describe pod mongo-deployment-56c4944b96-hsc5t
+  229  kubectl describe pod mongo-deployment-56c4944b96-hsc5t
+  230  kubectl get pods
+  231  kubectl get pods
+  232  clear
+  233  ls
+  234  vi sidecar.yml
+  235  kubectl apply -f sidecar.yml 
+  236  kubectl get pods
+  237  kubectl get pods
+  238  kubectl get deployment myapp-5ff59fbb87-cpbgb
+  239  kubectl get pods myapp-5ff59fbb87-cpbgb
+  240  kubectl logs pods myapp-5ff59fbb87-cpbgb
+  241  kubectl log pods myapp-5ff59fbb87-cpbgb
+  242  kubectl logs pods/myapp-5ff59fbb87-cpbgb
+  243  kubectl describe pod myapp-5ff59fbb87-cpbgb
+  244  clear
+  245  mkdir deployment-strategy
+  246  cd deployment-strategy/
+  247  vi recreate-deployment.yml
+  248  kubectl apply -f recreate-deployment.yml 
+  249  kubectl get svc
+  250  curl 192.168.49.2:31347
+  251  kubectl get pods
+  252  vi recreate-deployment.yml 
+  253  kubectl apply -f recreate-deployment.yml 
+  254  kubectl get pods
+  255  kubectl get pods
+  256  kubectl get pods
+  257  kubectl get pods
+  258  curl 192.168.49.2:31347
+  259  cd /
+  260  yum install docker -y
+  261  systemctl start docker
+  262  #Launch an EC2 Instance with t2.medium Instance Type(We will configure Minikube Server on it)
+  263  #Install Minikube
+  264  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
+  265  rpm -Uvh minikube-latest.x86_64.rpm
+  266  minikube start --force
+  267  #Install kubectl
+  268  curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.28.3/2023-11-14/bin/linux/amd64/kubectl
+  269  chmod +x ./kubectl
+  270  cp ./kubectl /usr/bin/
+  271  kubectl get pods
+  272  clear
+  273  minikube dashboard --host=0.0.0.0
+  274  minikube dashboard -help
+  275  minikube dashboard --help
+  276  minikube dashboard 
+  277  cd /
+  278  clear
+  279  cd k8s/
+  280  ls
+  281  cd deployment-strategy/
+  282  la
+  283  ls
+  284  vi recreate-deployment.yml 
+  285  clear
+  286  kubectl apply -f recreate-deployment.yml 
+  287   kubectl get rs
+  288  vi recreate-deployment.yml 
+  289  kubectl apply -f recreate-deployment.yml 
+  290  kubectl rollout status deployment gfgdeployment
+  291  kubectl rollout status deployment gfgdeployment
+  292  kubectl get svc
+  293  curl 192.168.49.2:31347
+  294  kubectl rollout history deployment gfgdeployment
+  295  kubectl rollout undo deployment gfgdeployment --to-revision=1
+  296  curl 192.168.49.2:31347
+  297  curl 192.168.49.2:31347
+  298  curl 192.168.49.2:31347
+  299  kubectl rollout undo deployment gfgdeployment --to-revision=2
+  300  curl 192.168.49.2:31347
+  301  curl 192.168.49.2:31347
+  302  clear
+  303  ls
+  304  cp recreate-deployment.yml roling-update-deployment.yml
+  305  vi roling-update-deployment.yml 
+  306  cd /
+  307  cd k8s/
+  308  cd deployment-strategy/
+  309  ls
+  310  vi roling-update-deployment.yml 
+  311  kubectl delete deployment gfgdeployment
+  312  clear
+  313  kubectl apply -f roling-update-deployment.yml 
+  314  kubectl get svc
+  315  curl 192.168.49.2:31347
+  316  vi roling-update-deployment.yml 
+  317  ls -l
+  318  ls -l -a
+  319  rm -rf .roling-update-deployment.yml.swp 
+  320  vi roling-update-deployment.yml 
+  321  curl 192.168.49.2:31347
+  322  kubectl apply -f roling-update-deployment.yml 
+  323  curl 192.168.49.2:31347
+  324  vi deployment-blue.yaml
+  325  vi deployment-green.yaml
+  326  vi service-blue-green.yml
+  327  kubectl apply -f deployment-blue.yaml 
+  328  kubectl apply -f service-blue-green.yml 
+  329  kubectl get svc
+  330  curl 192.168.49.2:31688
+  331  kubectl apply -f deployment-green.yaml 
+  332  curl 192.168.49.2:31688
+  333  vi service-blue-green.yml
+  334  curl 192.168.49.2:31688
+  335  kubectl apply -f service-blue-green.yml 
+  336  curl 192.168.49.2:31688
+  337  vi deploymentv1.yml
+  338  vi deploymentv2.yml
+  339  vi servicecanary.yml
+  340  vi deploymentv1.yml 
+  341  kubectl apply -f deploymentv1.yml 
+  342  kubectl apply -f deploymentv2.yml 
+  343  kubectl apply -f servicecanary.yml 
+  344  kubectl get svc
+  345  curl 192.168.49.2:31688
+  346  curl 192.168.49.2:31688
+  347  curl 192.168.49.2:31688
+  348  curl 192.168.49.2:31688
+  349  curl 192.168.49.2:31688
+  350  curl 192.168.49.2:31688
+  351  ls
+  352  kubectl delete all --all
+  353  cd ..
+  354  vi livenessprobe-memory-leak.yml
+  355  kubectl apply -f livenessprobe-memory-leak.yml 
+  356  vi livenessprobe-memory-leak.yml
+  357  kubectl apply -f livenessprobe-memory-leak.yml 
+  358  kubectl get svc -n kubernetes-dashboard
+  359  socat TCP4-LISTEN:8080,fork,su=nobody TCP4:192.168.49.2:31306
+  360  socat TCP4-LISTEN:8080,fork,su=nobody TCP4:192.168.49.2:31306 &
+  361  kubectl get pods
+  362  kubectl get svc
+  363  socat TCP4-LISTEN:8081,fork,su=nobody TCP4:192.168.49.2:30000 &
+  364  vi siege-livenessprobe.yml
+  365  kubectl apply -f siege-livenessprobe.yml 
+  366  kubectl logs pods siege-589dc5467f-c6vjf 
+  367  kubectl logs pod siege-589dc5467f-c6vjf 
+  368  kubectl logs pod/siege-589dc5467f-c6vjf 
+  369  vi siege-livenessprobe.yml
+  370  kubectl apply -f siege-livenessprobe.yml 
+  371  kubectl get svc
+  372  vi siege-livenessprobe.yml
+  373  kubectl apply -f siege-livenessprobe.yml 
+  374  kubectl get pods
+  375  docker ps
+  376  kubectl get pods
+  377  kubectl get svc
+  378  kubectl get svc
+  379  minikube start --force
+  380  rm -rf /tmp/
+  381  cd /tmp/
+  382  ls
+  383  minikube start --force
+  384  kubectl get svc -n kubernetes-dashboard
+  385  socat TCP4-LISTEN:8080,fork,su=nobody TCP4:192.168.49.2:31306 &
+  386  minikube dashboard
+  387  kubectl get svc -n kubernetes-dashboard
+  388  socat TCP4-LISTEN:8082,fork,su=nobody TCP4:192.168.49.2:31306 &
+  389  kubectl get pods
+  390  kubectl delete all --all
+  391  pgrep socat
+  392  kill -9 245150 247938 271040
+  393  kubectl get svc -n kubernetes-dashboard
+  394  socat TCP4-LISTEN:8082,fork,su=nobody TCP4:192.168.49.2:31306 &
+  395  socat TCP4-LISTEN:8080,fork,su=nobody TCP4:192.168.49.2:31306 &
+  396  socat TCP4-LISTEN:8080,fork,su=nobody TCP4:192.168.49.2:31306 
+  397  socat TCP4-LISTEN:8081,fork,su=nobody TCP4:192.168.49.2:31306 
+  398  kubectl edit kubernetes-dashboard  -n kubernetes-dashboard
+  399  kubectl edit svc kubernetes-dashboard  -n kubernetes-dashboard
+  400  kubectl delete all -all -n kubernetes-dashboard
+  401  kubectl delete all --all -n kubernetes-dashboard
+  402  minikube dashboard
+  403  minikube delete
+  404  ls
+  405  rm -rf *
+  406  ls
+  407  minikube start --force
+  408  kubectl get poda
+  409  kubectl get poda
+  410  kubectl get pods
+  411  fg
+  412  kubectl get pods
+  413  clear
+  414  kubectl get ns
+  415  minikube dashboard & 
+  416  kubectl get ns
+  417  kubectl get svc -n kubernetes-dashboard
+  418  kubectl edit svc kubernetes-dashboard -n kubernetes-dashboard
+  419  kubectl get svc -n kubernetes-dashboard
+  420  socat TCP4-LISTEN:8081,fork,su=nobody TCP4:192.168.49.2:30213 & 
+  421  clear
+  422  kubectl get pods
+  423  clear
+  424  cd ..
+  425  mkdir gfgmern
+  426  cd gfgmern/
+  427  cp /k8s/mongo-app.yml /k8s/mongo-service.yml /k8s/mongo-config.yml /k8s/mongo-express-webapp.yml /k8s/secret.yml /k8s/webapp-service.yml .
+  428  ls
+  429  clear
+  430  kubectl get pods
+  431  pgrep socat
+  432  kill -9 288987
+  433  kubectl get pods
+  434  pgrep socat
+  435  ls
+  436  clear
+  437  ls
+  438  kubectl get pods
+  439  kubectl apply -f secret.yml 
+  440  kubectl apply -f mongo-config.yml 
+  441  kubectl apply -f mongo-app.yml 
+  442  kubectl apply -f mongo-service.yml 
+  443  kubectl apply -f mongo-express-webapp.yml 
+  444  kubectl apply -f webapp-service.yml 
+  445  kubectl get all
+  446  kubectl get pods
+  447  kubectl get all
+  448  kubectl get pods
+  449  vi mongo-app.yml 
+  450  kubectl apply -f mongo-app.yml 
+  451  kubectl get pods
+  452  kubectl get pods
+  453  kubectl get pods
+  454  kubectl get pods
+  455  kubectl get pods
+  456  kubectl get pods
+  457  clear
+  458  kubectl get pods
+  459  kubectl get ns
+  460  kubectl get pods
+  461  kubectl get pods -n kube-system
+  462  kubectl get all -n kube-system
+  463  kubectl get all -n kube-public
+  464  clear
+  465  vi namespace.yml
+  466  kubectl apply -f namespace.yml 
+  467  kubectl get ns
+  468  vi nginx-namespace.yml
+  469  kubectl apply -f nginx-namespace.yml 
+  470  kubectl get pods
+  471  kubectl get pods -n dev
+  472  ls
+  473  kubectl get svc
+  474  socat TCP4-LISTEN:8080,fork,su=nobody TCP4:192.168.49.2:30112 &
+  475  kubectl get pods
+  476  minikube dashboard &
+  477  kubectl get ns
+  478  kubectl get pods
+  479  kubectl get pods -n kubernetes-dashboard
+  480  kubectl get svc -n kubernetes-dashboard
+  481  docker ps
+  482  ls
+  483  kubectl get pod
+  484  kubectl edit pod mongo-deployment-69646f64f-2lbf8
+  485  kubectl edit  svc kubernetes-dashboard -n kubernetes-dashboard
+  486  kubectl get svc -n kubernetes-dashboard
+  487  socat TCP4-LISTEN:8081,fork,su=nobody TCP4:192.168.49.2:31580 &
+  488  cd /gfgmern/
+  489  ls
+  490  clear
+  491  vi mongo-app.yml 
+  492  kubectl apply -f mongo-app.yml 
+  493  vi mongo-app.yml 
+  494  kubectl apply -f mongo-app.yml 
+  495  kubectl get pods
+  496  kubectl get pods
+  497  kubectl get pods -o yaml
+  498  kubectl get pods
+  499  kubectl get pods mongo-deployment-68dbd64d6f-2ssnw -o yaml
+  500  docker exec -it minikube bash
+  501  ls
+  502  kubectl get pods
+  503  kubectl delete pods mongo-deployment-68dbd64d6f-2ssnw 
+  504  kubectl get pods
+  505  vi mongo-app.yml 
+  506  kubectl apply -f mongo-app.yml 
+  507  kubectl get pods
+  508  docker exec -it minikube bash
+  509  kubectl get pods
+  510  kubectl delete pod mongo-deployment-64985574d4-jbgwh 
+  511  kubectl get pods
+  512  ls
+  513  clear
+  514  vi pv.yml
+  515  kubectl get nodes
+  516  kubectl get nodes --show-labels
+  517  vi pv.yml
+  518  docker exec -it minikube bash
+  519  vi pv.yml
+  520  kubectl apply -f pv.yml 
+  521  vi pv.yml
+  522  kubectl apply -f pv.yml 
+  523  kubectl get pv
+  524  vi pvc.yml
+  525  kubectl apply -f pvc.yml 
+  526  vi pvc.yml
+  527  kubectl apply -f pvc.yml 
+  528  kubectl get pvc
+  529  kubectl get pv
+  530  kubectl get pvc
+  531  kubectl delete pvc mongo-pvc
+  532  kubectl get pv
+  533  vi pvc.yml 
+  534  kubectl apply -f pvc.yml 
+  535  kubectl get pvc
+  536  kubectl get pv
+  537  vi mongo-app.yml 
+  538  kubectl apply -f mongo-app.yml 
+  539  vi mongo-app.yml 
+  540  kubectl apply -f mongo-app.yml 
+  541  kubectl get pods
+  542  docker exec -it minibuke bash
+  543  docker exec -it minikube bash
+  544  ls
+  545  vi pod.yml
+  546  kubectl apply -f pod.yml 
+  547  kubectl apply -f pod.yml 
+  548  vi pod.yml
+  549  vi pod.yml
+  550  kubectl apply -f pod.yml 
+  551  vi pod.yml
+  552  kubectl apply -f pod.yml 
+  553  kubectl get pod
+  554  vi pod.yml
+  555  kubectl get pod
+  556  kubectl apply -f pod.yml 
+  557  kubectl get pod
+  558  kubectl get pod
+  559  kubectl get pod
+  560  kubectl delete pod flask-app
+  561  kubectl apply -f pod.yml 
+  562  kubectl delete pod flask-app
+  563  kubectl apply -f pod.yml 
+  564  kubectl get pod
+  565  kubectl get pod
+  566  kubectl get pod
+  567  kubectl exec -it flask-app bash
+  568  kubectl get pod
+  569  kubectl exec -it flask-app bash
+  570  kubectl get pod
+  571  vi pod.yml 
+  572  vi pod.yml 
+  573  kubectl apply -f pod.yml 
+  574  kubectl get pods
+  575  kubectl delete pod flask-app
+  576  kubectl apply -f pod.yml 
+  577  kubectl get pods
+  578  kubectl get pods
+  579  kubectl get pods
+  580  vi pod.yml 
+  581  kubectl get pods
+  582  vi pod.yml 
+  583  clear
+  584  mkdir deployment-strategy
+  585  cd deployment-strategy/
+  586  vi deployment.yml
+  587  vi deployment.yml
+  588  kubeclt apply -f deployment.yml 
+  589  kubectl apply -f deployment.yml 
+  590  vi deployment.yml
+  591  kubectl apply -f deployment.yml 
+  592  kubectl get pods
+  593  kubectl get svc
+  594  curl 192.168.49.2:31961
+  595  vi deployment.yml 
+  596  kubectl apply -f deployment.yml 
+  597  curl 192.168.49.2:31961
+  598  vi deployment.yml 
+  599  clear
+  600  kubectl rollout status deploymnet/gfgdeployment
+  601  kubectl rollout status deployent/gfgdeployment
+  602  kubectl rollout status deployment/gfgdeployment
+  603  kubectl rollout history deployment/gfgdeployment
+  604  curl 192.168.49.2:31961
+  605  curl 192.168.49.2:31961
+  606  curl 192.168.49.2:31961
+  607  kubectl rollout history deployment/gfgdeployment
+  608  kubectl rollout undo deployment/gfgdeployment --to-revision=2
+  609  kubectl rollout undo deployment/gfgdeployment --to-revision=1
+  610  curl 192.168.49.2:31961
+  611  vi deployment.yml 
+  612  clear
+  613  kubectl apply -f deployment.yml 
+  614  kubectl rollout history deployment/gfgdeployment
+  615  vi deployment.yml 
+  616  kubectl apply -f deployment.yml 
+  617  curl 192.168.49.2:31961
+  618  clear
+  619  vi deploymentblue.yml
+  620  kubectl get pods
+  621  kubectl delete deployment gfgdeployment
+  622  kubectl get pods
+  623  kubectl delete pod flask-app
+  624  kubectl get pods
+  625  clear
+  626  ls
+  627  kubectl apply -f deploymentblue.yml 
+  628  vi service.yml
+  629  kubectl apply -f service.yml 
+  630  kubectl get svc
+  631  curl 192.168.49.2:32272
+  632  curl 192.168.49.2:32272
+  633  cp deploymentblue.yml deploymentgreen.yml
+  634  vi deploymentgreen.yml 
+  635  kubectl apply -f deploymentgreen.yml 
+  636  curl 192.168.49.2:32272
+  637  curl 192.168.49.2:32272
+  638  curl 192.168.49.2:32272
+  639  vi service.yml 
+  640  kubectl apply -f service.yml 
+  641  curl 192.168.49.2:32272
+  642  curl 192.168.49.2:32272
+  643  clear
+  644  kubectl get pods
+  645  kubectl delete deployment deploymentblue
+  646  curl 192.168.49.2:32272
+  647  cp deploymentblue.yml deploymentv1.yml
+  648  kubectl delete deployment deploymentgreen
+  649  clear
+  650  vi deploymentv1
+  651  ls
+  652  rm -rf deploymentv1.yml 
+  653  cp deploymentblue.yml deploymentv1.yml
+  654  vi deploymentv1.yml 
+  655  kubectl apply deploymentv1.yml 
+  656* kubectl apply -f deploymentv2.yml 
+  657  cp deploymentgreen.yml deploymentv2.yml
+  658  clear
+  659  vi deploymentv2.yml 
+  660  vi deploymentv1.yml 
+  661  kubectl apply -f deploymentv1.yml 
+  662  vi deploymentv1.yml 
+  663  kubectl delete deployment deploymentv1
+  664  kubectl apply -f deploymentv1.yml 
+  665  clear
+  666  vi deploymentv2.yml 
+  667  kubectl apply -f deploymentv2.yml 
+  668  vi deploymentv2.yml 
+  669  kubectl apply -f deploymentv2.yml 
+  670  vi service.yml 
+  671  kubectl apply -f service.yml 
+  672  curl 192.168.49.2:32272
+  673  curl 192.168.49.2:32272
+  674  curl 192.168.49.2:32272
+  675  curl 192.168.49.2:32272
+  676  curl 192.168.49.2:32272
+  677  curl 192.168.49.2:32272
+  678  curl 192.168.49.2:32272
+  679  curl 192.168.49.2:32272
+  680  curl 192.168.49.2:32272
+  681  vi deploymentv2.yml 
+  682  kubectl apply -f deploymentv2.yml 
+  683  curl 192.168.49.2:32272
+  684  curl 192.168.49.2:32272
+  685  curl 192.168.49.2:32272
+  686  curl 192.168.49.2:32272
+  687  curl 192.168.49.2:32272
+  688  curl 192.168.49.2:32272
+  689  curl 192.168.49.2:32272
+  690  curl 192.168.49.2:32272
+  691  curl 192.168.49.2:32272
+  692  curl 192.168.49.2:32272
+  693  curl 192.168.49.2:32272
+  694  curl 192.168.49.2:32272
+  695  curl 192.168.49.2:32272
+  696  curl 192.168.49.2:32272
+  697  curl 192.168.49.2:32272
+  698  curl 192.168.49.2:32272
+  699  curl 192.168.49.2:32272
+  700  curl 192.168.49.2:32272
+  701  curl 192.168.49.2:32272
+  702  curl 192.168.49.2:32272
+  703  curl 192.168.49.2:32272
+  704  vi deploymentv1.yml 
+  705  kubectl apply -f deploymentv1.yml 
+  706  curl 192.168.49.2:32272
+  707  curl 192.168.49.2:32272
+  708  curl 192.168.49.2:32272
+  709  curl 192.168.49.2:32272
+  710  curl 192.168.49.2:32272
+  711  curl 192.168.49.2:32272
+  712  curl 192.168.49.2:32272
+  713  curl 192.168.49.2:32272
+  714  curl 192.168.49.2:32272
+  715  curl 192.168.49.2:32272
+  716  curl 192.168.49.2:32272
+  717  curl 192.168.49.2:32272
+  718  curl 192.168.49.2:32272
+  719  curl 192.168.49.2:32272
+  720  curl 192.168.49.2:32272
+  721  curl 192.168.49.2:32272
+  722  curl 192.168.49.2:32272
+  723  curl 192.168.49.2:32272
+  724  curl 192.168.49.2:32272 
+  725  curl 192.168.49.2:32272          
+  726  curl 192.168.49.2:32272          
+  727  curl 192.168.49.2:32272          
+  728  ls
+  729  ls
+  730  cd ..
+  731  ls
+  732  cd ..
+  733  ls
+  734  cd gfg
+  735  ls
+  736  cd ..
+  737  cd gfgmern/
+  738  ls
+  739  cat nginx-namespace.yml 
+  740  ls
+  741  cat pod.yml 
+  742  ls
+  743  cd ..
+  744  cd k8s/
+  745  ls
+  746  history

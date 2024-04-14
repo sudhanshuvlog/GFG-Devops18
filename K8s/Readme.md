@@ -108,4 +108,5 @@ spec:
 - Stateful vs Stateless App - https://www.redhat.com/en/topics/cloud-native-apps/stateful-vs-stateless
 - Benefits of K8s - https://www.ibm.com/blog/top-7-benefits-of-kubernetes/
 - history of K8s - https://www.ibm.com/blog/kubernetes-history/
+- Deployment Strategies - https://spacelift.io/blog/kubernetes-deployment-strategies
 

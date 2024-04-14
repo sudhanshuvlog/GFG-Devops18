@@ -102,4 +102,10 @@ spec:
     - containerPort: 80
 ```
 - In this above example, we are creating a pod using the Kubernetes configuration file.
+- Understand Persistent Volume - https://spacelift.io/blog/kubernetes-persistent-volumes
+- Health Probes - https://semaphoreci.com/blog/kubernetes-probes#:~:text=Kubernetes%2C%20the%20industry%2Dleading%20container,pods%20and%20their%20hosted%20applications.
+- Kubernetes Services - https://cloud.google.com/kubernetes-engine/docs/concepts/service#:~:text=applications%20using%20services.-,What%20is%20a%20Kubernetes%20Service%3F,contact%20Pods%20in%20the%20Service.
+- Stateful vs Stateless App - https://www.redhat.com/en/topics/cloud-native-apps/stateful-vs-stateless
+- Benefits of K8s - https://www.ibm.com/blog/top-7-benefits-of-kubernetes/
+- history of K8s - https://www.ibm.com/blog/kubernetes-history/
 

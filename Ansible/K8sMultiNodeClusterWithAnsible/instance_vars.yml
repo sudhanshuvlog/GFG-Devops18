@@ -1,0 +1,7 @@
+aws_region: ap-south-1
+instance_type: t2.medium
+aws_image: ami-05a5bb48beb785bf1
+subnet: subnet-04c1ed6ba9c55ffd7
+keypair_name: awsmumbainew31march
+count: 3
+security_group: default

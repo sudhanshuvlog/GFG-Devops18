@@ -1,0 +1,22 @@
+- hosts: localhost
+  tasks:
+  - package:
+      name: httpd
+      state: absent
+    tags:
+      - uninstall
+  - copy:
+      src: index.html
+      dest: /var/www/html
+  - copy:
+      src: httpd.conf
+      dest: /etc/httpd/conf/
+    notify:
+      - Restart apache
+    tags:
+      - configuration 
+  handlers:
+    - name: Restart apache
+      service:
+        name: httpd
+        state: restarted

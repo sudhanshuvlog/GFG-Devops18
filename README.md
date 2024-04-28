@@ -9,3 +9,7 @@
 - Connect with me - https://www.linkedin.com/in/sudhanshu--pandey/
 
 - Python Flask App I Used For Creating CI Pipeline - https://github.com/Trainersudhanshu/PythonFlaskAppNew/tree/main
+
+- Microservices Project - https://github.com/sudhanshuvlog/MicroservicesApp.git
+
+- Configure MultiNodeK8s Cluster Using Ansible - https://github.com/sudhanshuvlog/kubernetes-multinode-cluster-ansible-aws.git

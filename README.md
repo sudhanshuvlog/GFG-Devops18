@@ -13,3 +13,5 @@
 - Microservices Project - https://github.com/sudhanshuvlog/MicroservicesApp.git
 
 - Configure MultiNodeK8s Cluster Using Ansible - https://github.com/sudhanshuvlog/kubernetes-multinode-cluster-ansible-aws.git
+
+- DevOps End-to-End Pipeline(Integration of all technologies) - https://github.com/sudhanshuvlog/devops-end-to-end-pipeline

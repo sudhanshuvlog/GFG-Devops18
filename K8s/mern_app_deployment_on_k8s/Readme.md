@@ -55,7 +55,8 @@ Now, accessing the public IP of your EC2 instance at port 8080 will route traffi
 
 **Architecture Diagram:**
 
-![mern-architecture](images/mern-architecture.png)
+![image](https://github.com/sudhanshuvlog/GFG-Devops18/assets/124223047/11827a97-d3c6-415a-a68f-0ab04e33a12d)
+
 
 - We are going to Create two deployments one for the application(frontend/backend) and one for the database.
 
